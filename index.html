@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Mars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:ital, wght@0, 100; 0,200;0, 300; 0,400; 0,500; 0, 600; 0,700; 0,800; 0,900; 1,100;1,200;1, 300;1,400;1,500; 1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Notes">
+        <p class="poppins-medium">Peter Gene Hernandez</p>
+        <div class="image-center">
+            <img class="gambar" id="gambar" src="assets/image.jpg" alt="Gambar" width="100%" style="border-radius: 25px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        </div>
+
+        <div class="poppins-regular deskripsi">Deskripsi Bruno Mars:</div>
+        <ul class="deskripsi">
+            <li>Nama aslinya adalah Peter Gene Bayot Hernandes</li>
+            <li>Dia adalah keturunan Puerto Rico dan Filipina</li>
+            <li>Penggemarnya dikenal sebagai Hooligan</li>
+        </ul>
+        <br>
+        <button style="cursor: pointer;" onclick="gantiGambar()">Ganti wae </button>
+        <p class="txt-waktu" id="hasil"></p>
+    </div>
+
+    <script>
+        tanggal = new Date();
+        document.getElementById("hasil").innerHTML = tanggal
+
+        function gantiGambar() {
+            var gambar = document.getElementById('gambar');
+            var deskripsi = document.querySelectorAll('.deskripsi');
+            var loveYou = document.createElement('p'); 
+            loveYou.textContent = "Cause every night, i'm talking to the moon"; 
+            loveYou.classList.add('love-you'); ng
+            var loveYouExist = document.querySelector('.love-you')
+
+            
+            deskripsi.forEach(element => {
+                if (element.style.display !== 'none') {
+                    element.style.display = 'none';
+                } else {
+                    element.style.display = 'block';
+                }
+            });
+
+           
+            if (gambar.src.endsWith('aset/logo.png')) {
+                gambar.src = 'assets/image.jpg';
+            } else {
+                gambar.src = 'assets/change.jpg';
+            }
+            if (loveYouExist) {
+                loveYouExist.remove();
+            } else {
+                
+                gambar.parentNode.appendChild(loveYou);
+            }
+        }
+    </script>
+</body>
+
+</html>

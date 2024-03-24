@@ -1,0 +1,99 @@
+body {
+    font-family: "Poppins", sans-serif;
+    height: 70vh;
+    background-color: rgb(95, 93, 93); 
+    color: rgb(241, 232, 232); 
+}
+
+@keyframes shadow-animation {
+    0% {
+        box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    }
+    50% {
+        box-shadow: 0px 0px 30px rgba(255, 0, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    }
+}
+
+.Notes {
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    padding: 20px 40px 0 40px;
+    animation: shadow-animation 1s infinite; 
+    background-image: url("assets/background2.png"); 
+    background-size: cover; 
+    background-position: center; 
+    border: 2px solid transparent; 
+    color: white; 
+}
+
+.txt-waktu {
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white; 
+}
+
+.image-center {
+    text-align: center;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(255, 0, 0); 
+    color: white; 
+    transition: background-color 0.3s; 
+}
+
+button:active {
+    background-color: white; 
+    color: rgb(255, 0, 0); 
+}
+
+.love-you {
+    color: white; 
+    text-shadow: 0 0 5px red, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000, 0 0 30px #ff0000, 0 0 35px #ff0000; /* Mengatur efek siluet merah pada teks "love you" */
+}
+@keyframes blink {
+    0% {
+        opacity: 0; 
+    }
+    50% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0; 
+    }
+}
+
+.love-you {
+    color: white; 
+    text-shadow: 0 0 5px red, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000, 0 0 30px #ff0000, 0 0 35px #ff0000; /* Mengatur efek siluet merah pada teks "love you" */
+    animation: blink 1s infinite; 
+}
